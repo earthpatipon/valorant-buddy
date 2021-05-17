@@ -12,3 +12,6 @@ please check: https://discord.com/developers/applications
 
 ## Agent command
 - !sova <recon | shock> <map> Show .gif arrow position for given input
+
+## To be improved
+- add more supported agents and abilities
