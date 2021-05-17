@@ -4,6 +4,7 @@ A Discord bot for smoothing Valorant player experience
 ## Prerequisite
 - DISCORD_TOKEN
 - DISCORD_APPLICATION_ID
+
 please check: https://discord.com/developers/applications
 
 ## Feature command
