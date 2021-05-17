@@ -1,4 +1,4 @@
-# Valorant_Tracker
+# Valorant Buddy
 A Discord bot for smoothing Valorant player experience
 
 ## Prerequisite
