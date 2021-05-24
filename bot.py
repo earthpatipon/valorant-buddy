@@ -189,18 +189,18 @@ def is_spam(user_id):
 
 def validate_agent_command(command):
     result = []
-    DISCORD_TOKENs = command.lower().split(" ")
-    if len(DISCORD_TOKENs) == 4:                # ability map start:place dest:place
-        if "start" not in DISCORD_TOKENs[2] or "dest" not in DISCORD_TOKENs[3]:
+    splits = command.lower().split(" ")
+    if len(splits) == 4:                # ability map start:place dest:place
+        if "start" not in splits[2] or "dest" not in splits[3]:
             pass
-        result = search("sova", DISCORD_TOKENs[0], DISCORD_TOKENs[1], DISCORD_TOKENs[2].split(":")[1], DISCORD_TOKENs[3].split(":")[1])
-    elif len(DISCORD_TOKENs) == 3:
-        if "start" in DISCORD_TOKENs[2]:        # ability map start:place
-            result = search("sova", DISCORD_TOKENs[0], DISCORD_TOKENs[1], DISCORD_TOKENs[2].split(":")[1], None)
-        elif "dest" in DISCORD_TOKENs[2]:       # ability map dest:place
-            result = search("sova", DISCORD_TOKENs[0], DISCORD_TOKENs[1], None, DISCORD_TOKENs[2].split(":")[1])
-    elif len(DISCORD_TOKENs) == 2:              # ability map
-        result = search("sova", DISCORD_TOKENs[0], DISCORD_TOKENs[1], None, None)
+        result = search("sova", splits[0], splits[1], splits[2].split(":")[1], splits[3].split(":")[1])
+    elif len(splits) == 3:
+        if "start" in splits[2]:        # ability map start:place
+            result = search("sova", splits[0], splits[1], splits[2].split(":")[1], None)
+        elif "dest" in splits[2]:       # ability map dest:place
+            result = search("sova", splits[0], splits[1], None, splits[2].split(":")[1])
+    elif len(splits) == 2:              # ability map
+        result = search("sova", splits[0], splits[1], None, None)
     else:
         pass
     return result
